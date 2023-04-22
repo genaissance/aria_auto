@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+########
 # upload_file_github.py
 # Description: uploads a file to github
 # Example Usage:
