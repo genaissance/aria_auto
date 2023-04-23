@@ -3,15 +3,15 @@
 # upload_file_github.py
 # Description: uploads a file to github
 # Example Usage:
-## python3 upload_to_github.py "$your_github_token" "$repo_owner_or_org_name" "$repo_name" "/path/to/your/local/file.txt" "path/in/repo/where/you/want/to/upload/file.txt"
-## python3 upload_to_github.py "$your_github_token" "$repo_owner_or_org_name" "$repo_name" "sclean.py" "pipelines/aws-vpc_tanzu-ra/artifacts/sclean.py"
+## python3 upload_file_github.py "$your_github_token" "$repo_owner_or_org_name" "$repo_name" "/path/to/your/local/file.txt" "path/in/repo/where/you/want/to/upload/file.txt"
+## python3 upload_file_github.py "$your_github_token" "$repo_owner_or_org_name" "$repo_name" "sclean.py" "pipelines/aws-vpc_tanzu-ra/artifacts/sclean.py"
 """
 Let's assume you have a GitHub repository named example-repo owned by the user john-doe. You want to upload a local file named example.txt to this repository in the data folder. You have a personal access token (PAT) for authentication.
 
-First, make sure you have the updated Python script saved as upload_to_github.py. Then, execute the script in your terminal as follows:
+First, make sure you have the updated Python script saved as upload_file_github.py. Then, execute the script in your terminal as follows:
 
 ```bash
-python upload_to_github.py "your_personal_access_token" "john-doe" "example-repo" "/path/to/your/local/example.txt" "data/example.txt"
+python upload_file_github.py "your_personal_access_token" "john-doe" "example-repo" "/path/to/your/local/example.txt" "data/example.txt"
 ```
 Replace your_personal_access_token with the actual token, and /path/to/your/local/example.txt with the correct path to the example.txt file on your local machine.
 
@@ -29,7 +29,7 @@ import requests
 import base64
 import argparse
 
-def upload_to_github(token, repo_owner, repo_name, file_path, file_destination):
+def upload_file_github(token, repo_owner, repo_name, file_path, file_destination):
     with open(file_path, 'rb') as file:
         content = file.read()
     
@@ -65,7 +65,7 @@ def main():
 
     args = parser.parse_args()
 
-    upload_to_github(args.token, args.repo_owner, args.repo_name, args.file_path, args.file_destination)
+    upload_file_github(args.token, args.repo_owner, args.repo_name, args.file_path, args.file_destination)
 
 if __name__ == '__main__':
     main()
