@@ -52,9 +52,13 @@ wget https://raw.githubusercontent.com/genaissance/aria_auto/main/pipelines/aws-
 wget https://raw.githubusercontent.com/genaissance/aria_auto/main/pipelines/aws-vpc_tanzu-ra/init.template.sls
 # download create_guardrails.py
 wget https://raw.githubusercontent.com/genaissance/aria_auto/main/pipelines/aws-vpc_tanzu-ra/create_guardrails.py
-# download reorder.py
+# download other utilities
 wget https://raw.githubusercontent.com/genaissance/aria_auto/main/pipelines/aws-vpc_tanzu-ra/reorder.py
+wget https://raw.githubusercontent.com/genaissance/aria_auto/main/pipelines/aws-vpc_tanzu-ra/generate_idem_describe_commands.py
+######## The Following line can be uncommented for testing without running idem state command
+# wget https://raw.githubusercontent.com/genaissance/aria_auto/main/pipelines/aws-vpc_tanzu-ra/init.output.yaml
 # Install any dependent packages in python scripts
+pip install ruamel.yaml
 pip install pipreqs
 pipreqs .
 pip install -r requirements.txt
@@ -65,9 +69,17 @@ echo "Here is the init.sls file with envars populated:"
 ## specify the output value as yaml and redirect output to deployment_guardrails.sls file
 idem state init.sls --output yaml > init.output.yaml
 # convert init.output.yaml to unordered_guardrails.sls using create_guardrails.py
-python3 create_guardrails.py init.output.yaml unordered_guardrails.sls
+python3 create_guardrails.py init.output.yaml unordered_resource_list.yaml
 # call reorder.py to reorder the unordered_guardrails.sls file and save as deployment_guardrails.sls
-python3 reorder.py init.sls unordered_guardrails.sls deployment_guardrails.sls
+python3 reorder.py init.sls unordered_resource_list.yaml ordered_resource_list.yaml
+python3 generate_idem_describe_commands.py ordered_resource_list.yaml idem_describe_list.txt
+# The following while loop executes each command in the idem_describe_list.txt and outputs the results to the deployment_guardrails.sls file
+while IFS= read -r command
+do
+  # Execute the command and append the output to deployment_guardrails.sls
+  eval "$command" >> deployment_guardrails.sls
+done < "idem_describe_list.txt"
+python3 upload_file_github.py "$your_github_token" "$repo_owner_or_org_name" "$private_repo_name" "init.output.yaml" "pipelines/aws-vpc_tanzu-ra/artifacts/$PIPELINE_START_TIMESTAMP/init.output.yaml"
 python3 upload_file_github.py "$your_github_token" "$repo_owner_or_org_name" "$private_repo_name" "deployment_guardrails.sls" "pipelines/aws-vpc_tanzu-ra/artifacts/$PIPELINE_START_TIMESTAMP/deployment_guardrails.sls"
 python3 upload_file_github.py "$your_github_token" "$repo_owner_or_org_name" "$private_repo_name" "init.sls" "pipelines/aws-vpc_tanzu-ra/artifacts/$PIPELINE_START_TIMESTAMP/init.sls"
 
