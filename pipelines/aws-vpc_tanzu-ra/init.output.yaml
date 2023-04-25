@@ -1,0 +1,1129 @@
+aws.ec2.dhcp_option_association_|-tap_vpc_dhcp_option_association_|-tap_vpc_dhcp_option_association_|-present:
+  __id__: tap_vpc_dhcp_option_association
+  __run_num: 17
+  acct_details:
+    attribute_key: Account
+    attribute_value: '918199106653'
+    provider: AWS
+    region_name: us-east-2
+  changes: {}
+  comment:
+  - aws.ec2.dhcp_option_association 'tap_vpc_dhcp_option_association' for vpc_id 'vpc-0c153d7f77ef552da'
+    already exists
+  esm_tag: aws.ec2.dhcp_option_association_|-tap_vpc_dhcp_option_association_|-tap_vpc_dhcp_option_association_|-
+  name: tap_vpc_dhcp_option_association
+  new_state:
+    dhcp_id: dopt-0a9121d5cabe907fe
+    name: tap_vpc_dhcp_option_association
+    resource_id: dopt-0a9121d5cabe907fe-vpc-0c153d7f77ef552da
+    vpc_id: vpc-0c153d7f77ef552da
+  old_state:
+    dhcp_id: dopt-0a9121d5cabe907fe
+    name: tap_vpc_dhcp_option_association
+    resource_id: dopt-0a9121d5cabe907fe-vpc-0c153d7f77ef552da
+    vpc_id: vpc-0c153d7f77ef552da
+  ref: states.aws.ec2.dhcp_option_association.present
+  rerun_data: null
+  result: true
+  sls_meta:
+    ID_DECS: {}
+    SLS: {}
+  start_time: '2023-04-23 14:29:16.952807'
+  tag: aws.ec2.dhcp_option_association_|-tap_vpc_dhcp_option_association_|-tap_vpc_dhcp_option_association_|-present
+  total_seconds: 0.8945
+aws.ec2.dhcp_option_|-tap_dhcp_option_|-tap_dhcp_option_|-present:
+  __id__: tap_dhcp_option
+  __run_num: 37
+  changes:
+    new:
+      dhcp_configurations:
+      - Key: domain-name
+        Values:
+        - ec2.internal
+      - Key: domain-name-servers
+        Values:
+        - AmazonProvidedDNS
+      name: tap_dhcp_option
+      resource_id: dopt-0a9121d5cabe907fe
+      tags:
+        LandingZone: dev_cloud
+        Name: tap_dhcp_option
+        Stack: tap_quickstart_idem
+      vpc_id:
+      - vpc-0c153d7f77ef552da
+  comment:
+  - Created aws.ec2.dhcp_option 'tap_dhcp_option'
+  - ResponseMetadata
+  - aws.ec2.dhcp_option 'tap_dhcp_option' already exists
+  esm_tag: aws.ec2.dhcp_option_|-tap_dhcp_option_|-tap_dhcp_option_|-
+  name: tap_dhcp_option
+  new_state:
+    dhcp_configurations:
+    - Key: domain-name
+      Values:
+      - ec2.internal
+    - Key: domain-name-servers
+      Values:
+      - AmazonProvidedDNS
+    name: tap_dhcp_option
+    resource_id: dopt-0a9121d5cabe907fe
+    tags:
+      LandingZone: dev_cloud
+      Name: tap_dhcp_option
+      Stack: tap_quickstart_idem
+    vpc_id:
+    - vpc-0c153d7f77ef552da
+  old_state: null
+  rerun_data: null
+  result: true
+  sls_meta:
+    ID_DECS: {}
+    SLS: {}
+  start_time: '2023-04-23 14:29:13.421273'
+  tag: aws.ec2.dhcp_option_|-tap_dhcp_option_|-tap_dhcp_option_|-present
+  total_seconds: 139.715823
+aws.ec2.elastic_ip_|-nat_1_eip_|-nat_1_eip_|-present:
+  __id__: nat_1_eip
+  __run_num: 30
+  changes:
+    new:
+      allocation_id: eipalloc-059d589ae50a8ec22
+      association_id: eipassoc-06c79567004b51785
+      domain: vpc
+      name: nat_1_eip
+      network_border_group: us-east-2
+      public_ipv4_pool: amazon
+      resource_id: 18.188.247.150
+      tags:
+        LandingZone: dev_cloud
+        Stack: tap_quickstart_idem
+  comment:
+  - Created aws.ec2.elastic_ip 'nat_1_eip'
+  esm_tag: aws.ec2.elastic_ip_|-nat_1_eip_|-nat_1_eip_|-
+  name: nat_1_eip
+  new_state:
+    allocation_id: eipalloc-059d589ae50a8ec22
+    association_id: eipassoc-06c79567004b51785
+    domain: vpc
+    name: nat_1_eip
+    network_border_group: us-east-2
+    public_ipv4_pool: amazon
+    resource_id: 18.188.247.150
+    tags:
+      LandingZone: dev_cloud
+      Stack: tap_quickstart_idem
+  old_state: null
+  rerun_data: null
+  result: true
+  sls_meta:
+    ID_DECS: {}
+    SLS: {}
+  start_time: '2023-04-23 14:29:08.278817'
+  tag: aws.ec2.elastic_ip_|-nat_1_eip_|-nat_1_eip_|-present
+  total_seconds: 144.857156
+aws.ec2.elastic_ip_|-nat_2_eip_|-nat_2_eip_|-present:
+  __id__: nat_2_eip
+  __run_num: 29
+  changes:
+    new:
+      allocation_id: eipalloc-0725f985c5f2b3cfc
+      association_id: eipassoc-0febf05c6971b0575
+      domain: vpc
+      name: nat_2_eip
+      network_border_group: us-east-2
+      public_ipv4_pool: amazon
+      resource_id: 3.21.69.190
+      tags:
+        LandingZone: dev_cloud
+        Stack: tap_quickstart_idem
+  comment:
+  - Created aws.ec2.elastic_ip 'nat_2_eip'
+  esm_tag: aws.ec2.elastic_ip_|-nat_2_eip_|-nat_2_eip_|-
+  name: nat_2_eip
+  new_state:
+    allocation_id: eipalloc-0725f985c5f2b3cfc
+    association_id: eipassoc-0febf05c6971b0575
+    domain: vpc
+    name: nat_2_eip
+    network_border_group: us-east-2
+    public_ipv4_pool: amazon
+    resource_id: 3.21.69.190
+    tags:
+      LandingZone: dev_cloud
+      Stack: tap_quickstart_idem
+  old_state: null
+  rerun_data: null
+  result: true
+  sls_meta:
+    ID_DECS: {}
+    SLS: {}
+  start_time: '2023-04-23 14:29:08.278309'
+  tag: aws.ec2.elastic_ip_|-nat_2_eip_|-nat_2_eip_|-present
+  total_seconds: 144.857493
+aws.ec2.elastic_ip_|-nat_3_eip_|-nat_3_eip_|-present:
+  __id__: nat_3_eip
+  __run_num: 28
+  changes:
+    new:
+      allocation_id: eipalloc-0b2753eaea3dc61a3
+      association_id: eipassoc-015ef578f76a22501
+      domain: vpc
+      name: nat_3_eip
+      network_border_group: us-east-2
+      public_ipv4_pool: amazon
+      resource_id: 3.145.246.26
+      tags:
+        LandingZone: dev_cloud
+        Stack: tap_quickstart_idem
+  comment:
+  - Created aws.ec2.elastic_ip 'nat_3_eip'
+  esm_tag: aws.ec2.elastic_ip_|-nat_3_eip_|-nat_3_eip_|-
+  name: nat_3_eip
+  new_state:
+    allocation_id: eipalloc-0b2753eaea3dc61a3
+    association_id: eipassoc-015ef578f76a22501
+    domain: vpc
+    name: nat_3_eip
+    network_border_group: us-east-2
+    public_ipv4_pool: amazon
+    resource_id: 3.145.246.26
+    tags:
+      LandingZone: dev_cloud
+      Stack: tap_quickstart_idem
+  old_state: null
+  rerun_data: null
+  result: true
+  sls_meta:
+    ID_DECS: {}
+    SLS: {}
+  start_time: '2023-04-23 14:29:08.277705'
+  tag: aws.ec2.elastic_ip_|-nat_3_eip_|-nat_3_eip_|-present
+  total_seconds: 144.858532
+aws.ec2.internet_gateway_|-tap_internet_gateway_|-tap_internet_gateway_|-present:
+  __id__: tap_internet_gateway
+  __run_num: 35
+  changes:
+    new:
+      attachments:
+      - State: available
+        VpcId: vpc-0c153d7f77ef552da
+      name: tap_internet_gateway
+      resource_id: igw-09d577ab9a3e25d3c
+      tags:
+        LandingZone: dev_cloud
+        Name: tap_internet_gateway
+        Stack: tap_quickstart_idem
+      vpc_id:
+      - vpc-0c153d7f77ef552da
+  comment:
+  - Created 'tap_internet_gateway'
+  - Created 'tap_internet_gateway' and attached to vpc 'vpc-0c153d7f77ef552da'
+  - '''tap_internet_gateway'' already exists'
+  - '''igw-09d577ab9a3e25d3c'' is already attached to vpc ''vpc-0c153d7f77ef552da'''
+  esm_tag: aws.ec2.internet_gateway_|-tap_internet_gateway_|-tap_internet_gateway_|-
+  name: tap_internet_gateway
+  new_state:
+    attachments:
+    - State: available
+      VpcId: vpc-0c153d7f77ef552da
+    name: tap_internet_gateway
+    resource_id: igw-09d577ab9a3e25d3c
+    tags:
+      LandingZone: dev_cloud
+      Name: tap_internet_gateway
+      Stack: tap_quickstart_idem
+    vpc_id:
+    - vpc-0c153d7f77ef552da
+  old_state: null
+  rerun_data: null
+  result: true
+  sls_meta:
+    ID_DECS: {}
+    SLS: {}
+  start_time: '2023-04-23 14:29:13.419973'
+  tag: aws.ec2.internet_gateway_|-tap_internet_gateway_|-tap_internet_gateway_|-present
+  total_seconds: 139.716376
+aws.ec2.nat_gateway_|-nat_gateway_1_|-nat_gateway_1_|-present:
+  __id__: nat_gateway_1
+  __run_num: 41
+  changes:
+    new:
+      allocation_id: eipalloc-059d589ae50a8ec22
+      connectivity_type: public
+      name: nat_gateway_1
+      resource_id: nat-059fb09217850c35f
+      state: available
+      subnet_id: subnet-070087cf5165a7e16
+      tags:
+        LandingZone: dev_cloud
+        Name: nat_gateway_1
+        Stack: tap_quickstart_idem
+  comment:
+  - Created 'nat-059fb09217850c35f'
+  - aws.ec2.nat_gateway 'nat_gateway_1' has no property need to be updated
+  esm_tag: aws.ec2.nat_gateway_|-nat_gateway_1_|-nat_gateway_1_|-
+  name: nat_gateway_1
+  new_state:
+    allocation_id: eipalloc-059d589ae50a8ec22
+    connectivity_type: public
+    name: nat_gateway_1
+    resource_id: nat-059fb09217850c35f
+    state: available
+    subnet_id: subnet-070087cf5165a7e16
+    tags:
+      LandingZone: dev_cloud
+      Name: nat_gateway_1
+      Stack: tap_quickstart_idem
+  old_state: null
+  rerun_data: null
+  result: true
+  sls_meta:
+    ID_DECS: {}
+    SLS: {}
+  start_time: '2023-04-23 14:29:16.954152'
+  tag: aws.ec2.nat_gateway_|-nat_gateway_1_|-nat_gateway_1_|-present
+  total_seconds: 136.183385
+aws.ec2.nat_gateway_|-nat_gateway_2_|-nat_gateway_2_|-present:
+  __id__: nat_gateway_2
+  __run_num: 42
+  changes:
+    new:
+      allocation_id: eipalloc-0725f985c5f2b3cfc
+      connectivity_type: public
+      name: nat_gateway_2
+      resource_id: nat-0bbe399c0691b69ae
+      state: available
+      subnet_id: subnet-07787eb0f66a6e699
+      tags:
+        LandingZone: dev_cloud
+        Name: nat_gateway_2
+        Stack: tap_quickstart_idem
+  comment:
+  - Created 'nat-0bbe399c0691b69ae'
+  - aws.ec2.nat_gateway 'nat_gateway_2' has no property need to be updated
+  esm_tag: aws.ec2.nat_gateway_|-nat_gateway_2_|-nat_gateway_2_|-
+  name: nat_gateway_2
+  new_state:
+    allocation_id: eipalloc-0725f985c5f2b3cfc
+    connectivity_type: public
+    name: nat_gateway_2
+    resource_id: nat-0bbe399c0691b69ae
+    state: available
+    subnet_id: subnet-07787eb0f66a6e699
+    tags:
+      LandingZone: dev_cloud
+      Name: nat_gateway_2
+      Stack: tap_quickstart_idem
+  old_state: null
+  rerun_data: null
+  result: true
+  sls_meta:
+    ID_DECS: {}
+    SLS: {}
+  start_time: '2023-04-23 14:29:16.954786'
+  tag: aws.ec2.nat_gateway_|-nat_gateway_2_|-nat_gateway_2_|-present
+  total_seconds: 136.182548
+aws.ec2.nat_gateway_|-nat_gateway_3_|-nat_gateway_3_|-present:
+  __id__: nat_gateway_3
+  __run_num: 40
+  changes:
+    new:
+      allocation_id: eipalloc-0b2753eaea3dc61a3
+      connectivity_type: public
+      name: nat_gateway_3
+      resource_id: nat-0fafcf17a16e91a45
+      state: available
+      subnet_id: subnet-01e2d5c2bcaecb74a
+      tags:
+        LandingZone: dev_cloud
+        Name: nat_gateway_3
+        Stack: tap_quickstart_idem
+  comment:
+  - Created 'nat-0fafcf17a16e91a45'
+  - aws.ec2.nat_gateway 'nat_gateway_3' has no property need to be updated
+  esm_tag: aws.ec2.nat_gateway_|-nat_gateway_3_|-nat_gateway_3_|-
+  name: nat_gateway_3
+  new_state:
+    allocation_id: eipalloc-0b2753eaea3dc61a3
+    connectivity_type: public
+    name: nat_gateway_3
+    resource_id: nat-0fafcf17a16e91a45
+    state: available
+    subnet_id: subnet-01e2d5c2bcaecb74a
+    tags:
+      LandingZone: dev_cloud
+      Name: nat_gateway_3
+      Stack: tap_quickstart_idem
+  old_state: null
+  rerun_data: null
+  result: true
+  sls_meta:
+    ID_DECS: {}
+    SLS: {}
+  start_time: '2023-04-23 14:29:16.953474'
+  tag: aws.ec2.nat_gateway_|-nat_gateway_3_|-nat_gateway_3_|-present
+  total_seconds: 136.183965
+? aws.ec2.route_table_association_|-private_subnet_1a_route_table_association_|-private_subnet_1a_route_table_association_|-present
+: __id__: private_subnet_1a_route_table_association
+  __run_num: 61
+  changes:
+    new:
+      name: private_subnet_1a_route_table_association
+      resource_id: rtbassoc-036101fd28e6f2581
+      route_table_id: rtb-06cd6a4c4df10ba9b
+      subnet_id: subnet-070087cf5165a7e16
+  comment:
+  - Result of require aws.ec2.route_table_|-private_subnet_1a_route_table_|-private_subnet_1a_route_table_|-present
+    is "False", not "[True, None]"
+  - Created aws.ec2.route_table_association 'private_subnet_1a_route_table_association'
+  - aws.ec2.route_table_association 'private_subnet_1a_route_table_association' association
+    already exists
+  esm_tag: aws.ec2.route_table_association_|-private_subnet_1a_route_table_association_|-private_subnet_1a_route_table_association_|-
+  name: private_subnet_1a_route_table_association
+  new_state:
+    name: private_subnet_1a_route_table_association
+    resource_id: rtbassoc-036101fd28e6f2581
+    route_table_id: rtb-06cd6a4c4df10ba9b
+    subnet_id: subnet-070087cf5165a7e16
+  old_state: null
+  rerun_data: null
+  result: true
+  sls_meta: &id001
+    ID_DECS: {}
+    SLS: {}
+  start_time: '2023-04-23 14:31:22.492416'
+  tag: aws.ec2.route_table_association_|-private_subnet_1a_route_table_association_|-private_subnet_1a_route_table_association_|-present
+  total_seconds: 14.410841
+? aws.ec2.route_table_association_|-private_subnet_2a_route_table_association_|-private_subnet_2a_route_table_association_|-present
+: __id__: private_subnet_2a_route_table_association
+  __run_num: 60
+  changes:
+    new:
+      name: private_subnet_2a_route_table_association
+      resource_id: rtbassoc-0dcb865aff6ed1c8b
+      route_table_id: rtb-0938a0fab1bde98c5
+      subnet_id: subnet-07787eb0f66a6e699
+  comment:
+  - Result of require aws.ec2.route_table_|-private_subnet_2a_route_table_|-private_subnet_2a_route_table_|-present
+    is "False", not "[True, None]"
+  - Created aws.ec2.route_table_association 'private_subnet_2a_route_table_association'
+  - aws.ec2.route_table_association 'private_subnet_2a_route_table_association' association
+    already exists
+  esm_tag: aws.ec2.route_table_association_|-private_subnet_2a_route_table_association_|-private_subnet_2a_route_table_association_|-
+  name: private_subnet_2a_route_table_association
+  new_state:
+    name: private_subnet_2a_route_table_association
+    resource_id: rtbassoc-0dcb865aff6ed1c8b
+    route_table_id: rtb-0938a0fab1bde98c5
+    subnet_id: subnet-07787eb0f66a6e699
+  old_state: null
+  rerun_data: null
+  result: true
+  sls_meta: *id001
+  start_time: '2023-04-23 14:31:22.492094'
+  tag: aws.ec2.route_table_association_|-private_subnet_2a_route_table_association_|-private_subnet_2a_route_table_association_|-present
+  total_seconds: 14.411343
+? aws.ec2.route_table_association_|-private_subnet_3a_route_table_association_|-private_subnet_3a_route_table_association_|-present
+: __id__: private_subnet_3a_route_table_association
+  __run_num: 59
+  changes:
+    new:
+      name: private_subnet_3a_route_table_association
+      resource_id: rtbassoc-00a43b41a0068d4ce
+      route_table_id: rtb-05d90a52fd4c232ec
+      subnet_id: subnet-01e2d5c2bcaecb74a
+  comment:
+  - Result of require aws.ec2.route_table_|-private_subnet_3a_route_table_|-private_subnet_3a_route_table_|-present
+    is "False", not "[True, None]"
+  - Created aws.ec2.route_table_association 'private_subnet_3a_route_table_association'
+  - aws.ec2.route_table_association 'private_subnet_3a_route_table_association' association
+    already exists
+  esm_tag: aws.ec2.route_table_association_|-private_subnet_3a_route_table_association_|-private_subnet_3a_route_table_association_|-
+  name: private_subnet_3a_route_table_association
+  new_state:
+    name: private_subnet_3a_route_table_association
+    resource_id: rtbassoc-00a43b41a0068d4ce
+    route_table_id: rtb-05d90a52fd4c232ec
+    subnet_id: subnet-01e2d5c2bcaecb74a
+  old_state: null
+  rerun_data: null
+  result: true
+  sls_meta: *id001
+  start_time: '2023-04-23 14:31:22.491698'
+  tag: aws.ec2.route_table_association_|-private_subnet_3a_route_table_association_|-private_subnet_3a_route_table_association_|-present
+  total_seconds: 14.411471
+aws.ec2.route_table_association_|-public_subnet_1_route_table_association_|-public_subnet_1_route_table_association_|-present:
+  __id__: public_subnet_1_route_table_association
+  __run_num: 56
+  changes:
+    new:
+      name: public_subnet_1_route_table_association
+      resource_id: rtbassoc-0122075dd3ff86d4d
+      route_table_id: rtb-06050fa786be2006e
+      subnet_id: subnet-09b6571910904a15d
+  comment:
+  - Result of require aws.ec2.route_table_|-public_subnet_route_table_|-public_subnet_route_table_|-present
+    is "False", not "[True, None]"
+  - Created aws.ec2.route_table_association 'public_subnet_1_route_table_association'
+  - aws.ec2.route_table_association 'public_subnet_1_route_table_association' association
+    already exists
+  esm_tag: aws.ec2.route_table_association_|-public_subnet_1_route_table_association_|-public_subnet_1_route_table_association_|-
+  name: public_subnet_1_route_table_association
+  new_state:
+    name: public_subnet_1_route_table_association
+    resource_id: rtbassoc-0122075dd3ff86d4d
+    route_table_id: rtb-06050fa786be2006e
+    subnet_id: subnet-09b6571910904a15d
+  old_state: null
+  rerun_data: null
+  result: true
+  sls_meta: *id001
+  start_time: '2023-04-23 14:31:19.309680'
+  tag: aws.ec2.route_table_association_|-public_subnet_1_route_table_association_|-public_subnet_1_route_table_association_|-present
+  total_seconds: 17.593921
+aws.ec2.route_table_association_|-public_subnet_2_route_table_association_|-public_subnet_2_route_table_association_|-present:
+  __id__: public_subnet_2_route_table_association
+  __run_num: 58
+  changes:
+    new:
+      name: public_subnet_2_route_table_association
+      resource_id: rtbassoc-0fe285d9cc67b1f83
+      route_table_id: rtb-06050fa786be2006e
+      subnet_id: subnet-08fbda933ea07c716
+  comment:
+  - Result of require aws.ec2.route_table_|-public_subnet_route_table_|-public_subnet_route_table_|-present
+    is "False", not "[True, None]"
+  - Created aws.ec2.route_table_association 'public_subnet_2_route_table_association'
+  - aws.ec2.route_table_association 'public_subnet_2_route_table_association' association
+    already exists
+  esm_tag: aws.ec2.route_table_association_|-public_subnet_2_route_table_association_|-public_subnet_2_route_table_association_|-
+  name: public_subnet_2_route_table_association
+  new_state:
+    name: public_subnet_2_route_table_association
+    resource_id: rtbassoc-0fe285d9cc67b1f83
+    route_table_id: rtb-06050fa786be2006e
+    subnet_id: subnet-08fbda933ea07c716
+  old_state: null
+  rerun_data: null
+  result: true
+  sls_meta: *id001
+  start_time: '2023-04-23 14:31:19.308985'
+  tag: aws.ec2.route_table_association_|-public_subnet_2_route_table_association_|-public_subnet_2_route_table_association_|-present
+  total_seconds: 17.594534
+aws.ec2.route_table_association_|-public_subnet_3_route_table_association_|-public_subnet_3_route_table_association_|-present:
+  __id__: public_subnet_3_route_table_association
+  __run_num: 57
+  changes:
+    new:
+      name: public_subnet_3_route_table_association
+      resource_id: rtbassoc-0265aefcd14749f41
+      route_table_id: rtb-06050fa786be2006e
+      subnet_id: subnet-0e49de012a10cf649
+  comment:
+  - Result of require aws.ec2.route_table_|-public_subnet_route_table_|-public_subnet_route_table_|-present
+    is "False", not "[True, None]"
+  - Created aws.ec2.route_table_association 'public_subnet_3_route_table_association'
+  - aws.ec2.route_table_association 'public_subnet_3_route_table_association' association
+    already exists
+  esm_tag: aws.ec2.route_table_association_|-public_subnet_3_route_table_association_|-public_subnet_3_route_table_association_|-
+  name: public_subnet_3_route_table_association
+  new_state:
+    name: public_subnet_3_route_table_association
+    resource_id: rtbassoc-0265aefcd14749f41
+    route_table_id: rtb-06050fa786be2006e
+    subnet_id: subnet-0e49de012a10cf649
+  old_state: null
+  rerun_data: null
+  result: true
+  sls_meta: *id001
+  start_time: '2023-04-23 14:31:19.309378'
+  tag: aws.ec2.route_table_association_|-public_subnet_3_route_table_association_|-public_subnet_3_route_table_association_|-present
+  total_seconds: 17.593975
+aws.ec2.route_table_|-private_subnet_1a_route_table_|-private_subnet_1a_route_table_|-present:
+  __id__: private_subnet_1a_route_table
+  __run_num: 55
+  changes:
+    new:
+      name: private_subnet_1a_route_table
+      propagating_vgws: []
+      resource_id: rtb-06cd6a4c4df10ba9b
+      routes:
+      - DestinationCidrBlock: 10.0.0.0/16
+        GatewayId: local
+        Origin: CreateRouteTable
+        State: active
+      - DestinationCidrBlock: 0.0.0.0/0
+        NatGatewayId: nat-059fb09217850c35f
+        Origin: CreateRoute
+        State: active
+      tags:
+        LandingZone: dev_cloud
+        Name: private_subnet_1a_route_table
+        Stack: tap_quickstart_idem
+      vpc_id: vpc-0c153d7f77ef552da
+  comment:
+  - Created 'private_subnet_1a_route_table'
+  - 'ClientError: An error occurred (InvalidGatewayID.NotFound) when calling the CreateRoute
+    operation: The gateway ID ''local'' does not exist'
+  - 'Added Routes: [{''DestinationCidrBlock'': ''0.0.0.0/0'', ''NatGatewayId'': ''nat-059fb09217850c35f''}]'
+  - Updated route table rtb-06cd6a4c4df10ba9b
+  esm_tag: aws.ec2.route_table_|-private_subnet_1a_route_table_|-private_subnet_1a_route_table_|-
+  name: private_subnet_1a_route_table
+  new_state:
+    name: private_subnet_1a_route_table
+    propagating_vgws: []
+    resource_id: rtb-06cd6a4c4df10ba9b
+    routes:
+    - DestinationCidrBlock: 10.0.0.0/16
+      GatewayId: local
+      Origin: CreateRouteTable
+      State: active
+    - DestinationCidrBlock: 0.0.0.0/0
+      NatGatewayId: nat-059fb09217850c35f
+      Origin: CreateRoute
+      State: active
+    tags:
+      LandingZone: dev_cloud
+      Name: private_subnet_1a_route_table
+      Stack: tap_quickstart_idem
+    vpc_id: vpc-0c153d7f77ef552da
+  old_state: null
+  rerun_data: null
+  result: true
+  sls_meta: *id001
+  start_time: '2023-04-23 14:31:19.311398'
+  tag: aws.ec2.route_table_|-private_subnet_1a_route_table_|-private_subnet_1a_route_table_|-present
+  total_seconds: 17.591665
+aws.ec2.route_table_|-private_subnet_2a_route_table_|-private_subnet_2a_route_table_|-present:
+  __id__: private_subnet_2a_route_table
+  __run_num: 53
+  changes:
+    new:
+      name: private_subnet_2a_route_table
+      propagating_vgws: []
+      resource_id: rtb-0938a0fab1bde98c5
+      routes:
+      - DestinationCidrBlock: 10.0.0.0/16
+        GatewayId: local
+        Origin: CreateRouteTable
+        State: active
+      - DestinationCidrBlock: 0.0.0.0/0
+        NatGatewayId: nat-0bbe399c0691b69ae
+        Origin: CreateRoute
+        State: active
+      tags:
+        LandingZone: dev_cloud
+        Name: private_subnet_2a_route_table
+        Stack: tap_quickstart_idem
+      vpc_id: vpc-0c153d7f77ef552da
+  comment:
+  - Created 'private_subnet_2a_route_table'
+  - 'ClientError: An error occurred (InvalidGatewayID.NotFound) when calling the CreateRoute
+    operation: The gateway ID ''local'' does not exist'
+  - 'Added Routes: [{''DestinationCidrBlock'': ''0.0.0.0/0'', ''NatGatewayId'': ''nat-0bbe399c0691b69ae''}]'
+  - Updated route table rtb-0938a0fab1bde98c5
+  esm_tag: aws.ec2.route_table_|-private_subnet_2a_route_table_|-private_subnet_2a_route_table_|-
+  name: private_subnet_2a_route_table
+  new_state:
+    name: private_subnet_2a_route_table
+    propagating_vgws: []
+    resource_id: rtb-0938a0fab1bde98c5
+    routes:
+    - DestinationCidrBlock: 10.0.0.0/16
+      GatewayId: local
+      Origin: CreateRouteTable
+      State: active
+    - DestinationCidrBlock: 0.0.0.0/0
+      NatGatewayId: nat-0bbe399c0691b69ae
+      Origin: CreateRoute
+      State: active
+    tags:
+      LandingZone: dev_cloud
+      Name: private_subnet_2a_route_table
+      Stack: tap_quickstart_idem
+    vpc_id: vpc-0c153d7f77ef552da
+  old_state: null
+  rerun_data: null
+  result: true
+  sls_meta: *id001
+  start_time: '2023-04-23 14:31:19.310742'
+  tag: aws.ec2.route_table_|-private_subnet_2a_route_table_|-private_subnet_2a_route_table_|-present
+  total_seconds: 17.592024
+aws.ec2.route_table_|-private_subnet_3a_route_table_|-private_subnet_3a_route_table_|-present:
+  __id__: private_subnet_3a_route_table
+  __run_num: 54
+  changes:
+    new:
+      name: private_subnet_3a_route_table
+      propagating_vgws: []
+      resource_id: rtb-05d90a52fd4c232ec
+      routes:
+      - DestinationCidrBlock: 10.0.0.0/16
+        GatewayId: local
+        Origin: CreateRouteTable
+        State: active
+      - DestinationCidrBlock: 0.0.0.0/0
+        NatGatewayId: nat-0fafcf17a16e91a45
+        Origin: CreateRoute
+        State: active
+      tags:
+        LandingZone: dev_cloud
+        Name: private_subnet_3a_route_table
+        Stack: tap_quickstart_idem
+      vpc_id: vpc-0c153d7f77ef552da
+  comment:
+  - Created 'private_subnet_3a_route_table'
+  - 'ClientError: An error occurred (InvalidGatewayID.NotFound) when calling the CreateRoute
+    operation: The gateway ID ''local'' does not exist'
+  - 'Added Routes: [{''DestinationCidrBlock'': ''0.0.0.0/0'', ''NatGatewayId'': ''nat-0fafcf17a16e91a45''}]'
+  - Updated route table rtb-05d90a52fd4c232ec
+  esm_tag: aws.ec2.route_table_|-private_subnet_3a_route_table_|-private_subnet_3a_route_table_|-
+  name: private_subnet_3a_route_table
+  new_state:
+    name: private_subnet_3a_route_table
+    propagating_vgws: []
+    resource_id: rtb-05d90a52fd4c232ec
+    routes:
+    - DestinationCidrBlock: 10.0.0.0/16
+      GatewayId: local
+      Origin: CreateRouteTable
+      State: active
+    - DestinationCidrBlock: 0.0.0.0/0
+      NatGatewayId: nat-0fafcf17a16e91a45
+      Origin: CreateRoute
+      State: active
+    tags:
+      LandingZone: dev_cloud
+      Name: private_subnet_3a_route_table
+      Stack: tap_quickstart_idem
+    vpc_id: vpc-0c153d7f77ef552da
+  old_state: null
+  rerun_data: null
+  result: true
+  sls_meta: *id001
+  start_time: '2023-04-23 14:31:19.309996'
+  tag: aws.ec2.route_table_|-private_subnet_3a_route_table_|-private_subnet_3a_route_table_|-present
+  total_seconds: 17.592578
+aws.ec2.route_table_|-public_subnet_route_table_|-public_subnet_route_table_|-present:
+  __id__: public_subnet_route_table
+  __run_num: 52
+  changes:
+    new:
+      name: public_subnet_route_table
+      propagating_vgws: []
+      resource_id: rtb-06050fa786be2006e
+      routes:
+      - DestinationCidrBlock: 10.0.0.0/16
+        GatewayId: local
+        Origin: CreateRouteTable
+        State: active
+      - DestinationCidrBlock: 0.0.0.0/0
+        GatewayId: igw-09d577ab9a3e25d3c
+        Origin: CreateRoute
+        State: active
+      tags:
+        LandingZone: dev_cloud
+        Name: public_subnet_route_table
+        Stack: tap_quickstart_idem
+      vpc_id: vpc-0c153d7f77ef552da
+  comment:
+  - Created 'public_subnet_route_table'
+  - 'ClientError: An error occurred (InvalidGatewayID.NotFound) when calling the CreateRoute
+    operation: The gateway ID ''local'' does not exist'
+  - 'Added Routes: [{''DestinationCidrBlock'': ''0.0.0.0/0'', ''GatewayId'': ''igw-09d577ab9a3e25d3c''}]'
+  - Updated route table rtb-06050fa786be2006e
+  esm_tag: aws.ec2.route_table_|-public_subnet_route_table_|-public_subnet_route_table_|-
+  name: public_subnet_route_table
+  new_state:
+    name: public_subnet_route_table
+    propagating_vgws: []
+    resource_id: rtb-06050fa786be2006e
+    routes:
+    - DestinationCidrBlock: 10.0.0.0/16
+      GatewayId: local
+      Origin: CreateRouteTable
+      State: active
+    - DestinationCidrBlock: 0.0.0.0/0
+      GatewayId: igw-09d577ab9a3e25d3c
+      Origin: CreateRoute
+      State: active
+    tags:
+      LandingZone: dev_cloud
+      Name: public_subnet_route_table
+      Stack: tap_quickstart_idem
+    vpc_id: vpc-0c153d7f77ef552da
+  old_state: null
+  rerun_data: null
+  result: true
+  sls_meta: *id001
+  start_time: '2023-04-23 14:29:16.952035'
+  tag: aws.ec2.route_table_|-public_subnet_route_table_|-public_subnet_route_table_|-present
+  total_seconds: 139.950884
+aws.ec2.subnet_|-private_subnet_1a_|-private_subnet_1a_|-present:
+  __id__: private_subnet_1a
+  __run_num: 34
+  changes:
+    new:
+      assign_ipv6_address_on_creation: false
+      availability_zone: us-east-2a
+      cidr_block: 10.0.0.0/19
+      enable_dns_64: false
+      map_customer_owned_ip_on_launch: false
+      map_public_ip_on_launch: false
+      name: private_subnet_1a
+      private_dns_name_options_on_launch:
+        EnableResourceNameDnsAAAARecord: false
+        EnableResourceNameDnsARecord: false
+        HostnameType: ip-name
+      resource_id: subnet-070087cf5165a7e16
+      tags:
+        LandingZone: dev_cloud
+        Name: private_subnet_1a
+        Stack: tap_quickstart_idem
+      vpc_id: vpc-0c153d7f77ef552da
+  comment:
+  - Created aws.ec2.subnet 'private_subnet_1a'
+  esm_tag: aws.ec2.subnet_|-private_subnet_1a_|-private_subnet_1a_|-
+  name: private_subnet_1a
+  new_state:
+    assign_ipv6_address_on_creation: false
+    availability_zone: us-east-2a
+    cidr_block: 10.0.0.0/19
+    enable_dns_64: false
+    map_customer_owned_ip_on_launch: false
+    map_public_ip_on_launch: false
+    name: private_subnet_1a
+    private_dns_name_options_on_launch:
+      EnableResourceNameDnsAAAARecord: false
+      EnableResourceNameDnsARecord: false
+      HostnameType: ip-name
+    resource_id: subnet-070087cf5165a7e16
+    tags:
+      LandingZone: dev_cloud
+      Name: private_subnet_1a
+      Stack: tap_quickstart_idem
+    vpc_id: vpc-0c153d7f77ef552da
+  old_state: null
+  rerun_data: null
+  result: true
+  sls_meta:
+    ID_DECS: {}
+    SLS: {}
+  start_time: '2023-04-23 14:29:13.419140'
+  tag: aws.ec2.subnet_|-private_subnet_1a_|-private_subnet_1a_|-present
+  total_seconds: 139.718087
+aws.ec2.subnet_|-private_subnet_2a_|-private_subnet_2a_|-present:
+  __id__: private_subnet_2a
+  __run_num: 31
+  changes:
+    new:
+      assign_ipv6_address_on_creation: false
+      availability_zone: us-east-2b
+      cidr_block: 10.0.32.0/19
+      enable_dns_64: false
+      map_customer_owned_ip_on_launch: false
+      map_public_ip_on_launch: false
+      name: private_subnet_2a
+      private_dns_name_options_on_launch:
+        EnableResourceNameDnsAAAARecord: false
+        EnableResourceNameDnsARecord: false
+        HostnameType: ip-name
+      resource_id: subnet-07787eb0f66a6e699
+      tags:
+        LandingZone: dev_cloud
+        Name: private_subnet_2a
+        Stack: tap_quickstart_idem
+      vpc_id: vpc-0c153d7f77ef552da
+  comment:
+  - Created aws.ec2.subnet 'private_subnet_2a'
+  esm_tag: aws.ec2.subnet_|-private_subnet_2a_|-private_subnet_2a_|-
+  name: private_subnet_2a
+  new_state:
+    assign_ipv6_address_on_creation: false
+    availability_zone: us-east-2b
+    cidr_block: 10.0.32.0/19
+    enable_dns_64: false
+    map_customer_owned_ip_on_launch: false
+    map_public_ip_on_launch: false
+    name: private_subnet_2a
+    private_dns_name_options_on_launch:
+      EnableResourceNameDnsAAAARecord: false
+      EnableResourceNameDnsARecord: false
+      HostnameType: ip-name
+    resource_id: subnet-07787eb0f66a6e699
+    tags:
+      LandingZone: dev_cloud
+      Name: private_subnet_2a
+      Stack: tap_quickstart_idem
+    vpc_id: vpc-0c153d7f77ef552da
+  old_state: null
+  rerun_data: null
+  result: true
+  sls_meta:
+    ID_DECS: {}
+    SLS: {}
+  start_time: '2023-04-23 14:29:13.417049'
+  tag: aws.ec2.subnet_|-private_subnet_2a_|-private_subnet_2a_|-present
+  total_seconds: 139.719681
+aws.ec2.subnet_|-private_subnet_3a_|-private_subnet_3a_|-present:
+  __id__: private_subnet_3a
+  __run_num: 32
+  changes:
+    new:
+      assign_ipv6_address_on_creation: false
+      availability_zone: us-east-2c
+      cidr_block: 10.0.64.0/19
+      enable_dns_64: false
+      map_customer_owned_ip_on_launch: false
+      map_public_ip_on_launch: false
+      name: private_subnet_3a
+      private_dns_name_options_on_launch:
+        EnableResourceNameDnsAAAARecord: false
+        EnableResourceNameDnsARecord: false
+        HostnameType: ip-name
+      resource_id: subnet-01e2d5c2bcaecb74a
+      tags:
+        LandingZone: dev_cloud
+        Name: private_subnet_3a
+        Stack: tap_quickstart_idem
+      vpc_id: vpc-0c153d7f77ef552da
+  comment:
+  - Created aws.ec2.subnet 'private_subnet_3a'
+  esm_tag: aws.ec2.subnet_|-private_subnet_3a_|-private_subnet_3a_|-
+  name: private_subnet_3a
+  new_state:
+    assign_ipv6_address_on_creation: false
+    availability_zone: us-east-2c
+    cidr_block: 10.0.64.0/19
+    enable_dns_64: false
+    map_customer_owned_ip_on_launch: false
+    map_public_ip_on_launch: false
+    name: private_subnet_3a
+    private_dns_name_options_on_launch:
+      EnableResourceNameDnsAAAARecord: false
+      EnableResourceNameDnsARecord: false
+      HostnameType: ip-name
+    resource_id: subnet-01e2d5c2bcaecb74a
+    tags:
+      LandingZone: dev_cloud
+      Name: private_subnet_3a
+      Stack: tap_quickstart_idem
+    vpc_id: vpc-0c153d7f77ef552da
+  old_state: null
+  rerun_data: null
+  result: true
+  sls_meta:
+    ID_DECS: {}
+    SLS: {}
+  start_time: '2023-04-23 14:29:13.417958'
+  tag: aws.ec2.subnet_|-private_subnet_3a_|-private_subnet_3a_|-present
+  total_seconds: 139.719015
+aws.ec2.subnet_|-public_subnet_1_|-public_subnet_1_|-present:
+  __id__: public_subnet_1
+  __run_num: 38
+  changes:
+    new:
+      assign_ipv6_address_on_creation: false
+      availability_zone: us-east-2a
+      cidr_block: 10.0.128.0/20
+      enable_dns_64: false
+      map_customer_owned_ip_on_launch: false
+      map_public_ip_on_launch: true
+      name: public_subnet_1
+      private_dns_name_options_on_launch:
+        EnableResourceNameDnsAAAARecord: false
+        EnableResourceNameDnsARecord: false
+        HostnameType: ip-name
+      resource_id: subnet-09b6571910904a15d
+      tags:
+        LandingZone: dev_cloud
+        Name: public_subnet_1
+        Stack: tap_quickstart_idem
+      vpc_id: vpc-0c153d7f77ef552da
+  comment:
+  - Created aws.ec2.subnet 'public_subnet_1'
+  - Update map_public_ip_on_launch
+  esm_tag: aws.ec2.subnet_|-public_subnet_1_|-public_subnet_1_|-
+  name: public_subnet_1
+  new_state:
+    assign_ipv6_address_on_creation: false
+    availability_zone: us-east-2a
+    cidr_block: 10.0.128.0/20
+    enable_dns_64: false
+    map_customer_owned_ip_on_launch: false
+    map_public_ip_on_launch: true
+    name: public_subnet_1
+    private_dns_name_options_on_launch:
+      EnableResourceNameDnsAAAARecord: false
+      EnableResourceNameDnsARecord: false
+      HostnameType: ip-name
+    resource_id: subnet-09b6571910904a15d
+    tags:
+      LandingZone: dev_cloud
+      Name: public_subnet_1
+      Stack: tap_quickstart_idem
+    vpc_id: vpc-0c153d7f77ef552da
+  old_state: null
+  rerun_data: null
+  result: true
+  sls_meta:
+    ID_DECS: {}
+    SLS: {}
+  start_time: '2023-04-23 14:29:13.421876'
+  tag: aws.ec2.subnet_|-public_subnet_1_|-public_subnet_1_|-present
+  total_seconds: 139.714601
+aws.ec2.subnet_|-public_subnet_2_|-public_subnet_2_|-present:
+  __id__: public_subnet_2
+  __run_num: 33
+  changes:
+    new:
+      assign_ipv6_address_on_creation: false
+      availability_zone: us-east-2b
+      cidr_block: 10.0.144.0/20
+      enable_dns_64: false
+      map_customer_owned_ip_on_launch: false
+      map_public_ip_on_launch: true
+      name: public_subnet_2
+      private_dns_name_options_on_launch:
+        EnableResourceNameDnsAAAARecord: false
+        EnableResourceNameDnsARecord: false
+        HostnameType: ip-name
+      resource_id: subnet-08fbda933ea07c716
+      tags:
+        LandingZone: dev_cloud
+        Name: public_subnet_2
+        Stack: tap_quickstart_idem
+      vpc_id: vpc-0c153d7f77ef552da
+  comment:
+  - Created aws.ec2.subnet 'public_subnet_2'
+  - Update map_public_ip_on_launch
+  esm_tag: aws.ec2.subnet_|-public_subnet_2_|-public_subnet_2_|-
+  name: public_subnet_2
+  new_state:
+    assign_ipv6_address_on_creation: false
+    availability_zone: us-east-2b
+    cidr_block: 10.0.144.0/20
+    enable_dns_64: false
+    map_customer_owned_ip_on_launch: false
+    map_public_ip_on_launch: true
+    name: public_subnet_2
+    private_dns_name_options_on_launch:
+      EnableResourceNameDnsAAAARecord: false
+      EnableResourceNameDnsARecord: false
+      HostnameType: ip-name
+    resource_id: subnet-08fbda933ea07c716
+    tags:
+      LandingZone: dev_cloud
+      Name: public_subnet_2
+      Stack: tap_quickstart_idem
+    vpc_id: vpc-0c153d7f77ef552da
+  old_state: null
+  rerun_data: null
+  result: true
+  sls_meta:
+    ID_DECS: {}
+    SLS: {}
+  start_time: '2023-04-23 14:29:13.418547'
+  tag: aws.ec2.subnet_|-public_subnet_2_|-public_subnet_2_|-present
+  total_seconds: 139.718059
+aws.ec2.subnet_|-public_subnet_3_|-public_subnet_3_|-present:
+  __id__: public_subnet_3
+  __run_num: 36
+  changes:
+    new:
+      assign_ipv6_address_on_creation: false
+      availability_zone: us-east-2c
+      cidr_block: 10.0.160.0/20
+      enable_dns_64: false
+      map_customer_owned_ip_on_launch: false
+      map_public_ip_on_launch: true
+      name: public_subnet_3
+      private_dns_name_options_on_launch:
+        EnableResourceNameDnsAAAARecord: false
+        EnableResourceNameDnsARecord: false
+        HostnameType: ip-name
+      resource_id: subnet-0e49de012a10cf649
+      tags:
+        LandingZone: dev_cloud
+        Name: public_subnet_3
+        Stack: tap_quickstart_idem
+      vpc_id: vpc-0c153d7f77ef552da
+  comment:
+  - Created aws.ec2.subnet 'public_subnet_3'
+  - Update map_public_ip_on_launch
+  esm_tag: aws.ec2.subnet_|-public_subnet_3_|-public_subnet_3_|-
+  name: public_subnet_3
+  new_state:
+    assign_ipv6_address_on_creation: false
+    availability_zone: us-east-2c
+    cidr_block: 10.0.160.0/20
+    enable_dns_64: false
+    map_customer_owned_ip_on_launch: false
+    map_public_ip_on_launch: true
+    name: public_subnet_3
+    private_dns_name_options_on_launch:
+      EnableResourceNameDnsAAAARecord: false
+      EnableResourceNameDnsARecord: false
+      HostnameType: ip-name
+    resource_id: subnet-0e49de012a10cf649
+    tags:
+      LandingZone: dev_cloud
+      Name: public_subnet_3
+      Stack: tap_quickstart_idem
+    vpc_id: vpc-0c153d7f77ef552da
+  old_state: null
+  rerun_data: null
+  result: true
+  sls_meta:
+    ID_DECS: {}
+    SLS: {}
+  start_time: '2023-04-23 14:29:13.420685'
+  tag: aws.ec2.subnet_|-public_subnet_3_|-public_subnet_3_|-present
+  total_seconds: 139.716168
+aws.ec2.vpc_|-tap_vpc_|-tap_vpc_|-present:
+  __id__: tap_vpc
+  __run_num: 27
+  changes:
+    new:
+      cidr_block_association_set:
+      - AssociationId: vpc-cidr-assoc-01932e839913db363
+        CidrBlock: 10.0.0.0/16
+        CidrBlockState:
+          State: associated
+      enable_dns_hostnames: false
+      enable_dns_support: true
+      instance_tenancy: default
+      name: tap_vpc
+      resource_id: vpc-0c153d7f77ef552da
+      tags:
+        LandingZone: dev_cloud
+        Name: tap_quickstart_vpc
+        Stack: tap_quickstart_idem
+  comment:
+  - Created aws.ec2.vpc 'tap_vpc'
+  esm_tag: aws.ec2.vpc_|-tap_vpc_|-tap_vpc_|-
+  name: tap_vpc
+  new_state:
+    cidr_block_association_set:
+    - AssociationId: vpc-cidr-assoc-01932e839913db363
+      CidrBlock: 10.0.0.0/16
+      CidrBlockState:
+        State: associated
+    enable_dns_hostnames: false
+    enable_dns_support: true
+    instance_tenancy: default
+    name: tap_vpc
+    resource_id: vpc-0c153d7f77ef552da
+    tags:
+      LandingZone: dev_cloud
+      Name: tap_quickstart_vpc
+      Stack: tap_quickstart_idem
+  old_state: null
+  rerun_data: null
+  result: true
+  sls_meta:
+    ID_DECS: {}
+    SLS: {}
+  start_time: '2023-04-23 14:29:08.276930'
+  tag: aws.ec2.vpc_|-tap_vpc_|-tap_vpc_|-present
+  total_seconds: 144.859187
